@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 外部JS文件，一旦引用了外部文件，就不能在编写代码，即使编写了浏览器也会忽略 -->
+    <script type="text/javascript" src="js/02-代码外部引用.js"></script>
+
+    <!-- script标签中的JS代码 -->
+    <script>
+        alert("弹窗提示-script标签内部代码")
+    </script>
+</head>
+<body>
+    <!-- 以下JS代码虽然可以写到标签属性中，属于耦合，且不方便维护，不推荐使用。 -->
+
+    <!-- 可以将JS代码编写到标签的onclick属性中 
+         当点击按钮时，JS代码才会执行
+    -->
+    <button onclick="alert('按钮弹窗提示')">点我一下</button>
+
+    <!-- 可以将JS代码写在超链接的href属性中，点击超链接后执行JS代码 -->
+    <a href="javascript:alert('超链接弹窗提示')">超链接</a>
+    <a href="javascript:;">超链接</a>
+
+</body>
+</html>
