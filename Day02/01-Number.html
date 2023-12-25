@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+         * Number类型包括整数和浮点数。
+         * 表示数字最大值：Number.MAX_VALUE
+         * 表示数字最小值：Number.MIN_VALUE
+         * Infinity：表示Number类型的正无穷
+         * -Infinity：表示Number类型的负无穷
+         */
+        number1 = Infinity;
+        console.log(number1);
+        
+        console.log("Number最大值：" + Number.MAX_VALUE);
+        var a = 123;
+        
+        // 数字
+        a = 456.11;
+        // 字符串
+        a = "456.11";
+        
+        console.log(a + " 没法区分是字符串还是数字，看起来都一样。需要使用typeof检查变量类型");
+
+        /**
+         * typeof：用来检查变量类型
+         * - typeof 变量
+         */
+        console.log(typeof a);
+
+        // 字符串相乘会输出NaN，意思是Not a Number。
+        str1 = "abc" * "bcd";
+        console.log(str1);
+
+        str2 = NaN;
+        console.log(str2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
