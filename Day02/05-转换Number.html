@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,52 @@
     <script>
         /**
          * 将其他的数据类型转换为Number
-         * /
+         *   转换方式1:使用Number()函数，
+         *      1.如果是纯数字的字符串，则直接将其转换为数据。
+         *      2.如果字符串是非数据内容，则转换为NaN。
+         *      3.如果字符串是一个空字符串或者是一个全是空格的字符串则转换为0。
+         *      4.布尔转数字，true=1，反正=0。
+         *      5.null转数字=0。
+         *      6.undefined = NaN.
+         *   转换方式2:专门用来对付字符串
+         *      1.parseInt()，把字符串转换为一个整数。可以将字符串中的有效整数内容取出来。
+         *      2.parseFloat()，把字符串转换为一个浮点数。
+         */
+
+        var a = "123";  // 123
+
+        a = "abc"   // NaN
+
+        a = true;   // 1
+
+        a = false;  // 0
+
+        a = null;   // 0
+
+        a = undefined;  // NaN
+
+        a = "123px";    // NaN
+
+        //调用Number()函数将变量a转换为Number类型
+        a = Number(a);
+
+        console.log(typeof a);
+        console.log(a);
+
+
+
+        b = "123px";    // 123
+
+        //调用parseInt()函数将变量b转换为Number类型
+        b = parseInt(b);
+
+        console.log(typeof b);
+        console.log(b);
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
